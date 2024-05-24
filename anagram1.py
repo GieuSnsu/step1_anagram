@@ -1,5 +1,4 @@
-import random
-
+# return {sorted_word:[word]}
 def sorted_words():
     words = {}
     with open("words.txt") as file:
@@ -11,5 +10,6 @@ def sorted_words():
             words[sorted_word] = word_set
     return words
 
+# return a set of anagramed words
 def lookup(word):
     return sorted_words().get("".join(sorted(word))) or set()
